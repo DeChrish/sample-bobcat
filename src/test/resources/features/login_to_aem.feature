@@ -5,5 +5,5 @@ Feature: Login
 
   Scenario: Login with valid credentials
     Given I have opened test page
-    And I login
+    When I login
     Then I should see test page

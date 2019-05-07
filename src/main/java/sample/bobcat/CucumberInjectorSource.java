@@ -1,4 +1,4 @@
-package sample.bobcat.sample.bobcat;
+package sample.bobcat;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

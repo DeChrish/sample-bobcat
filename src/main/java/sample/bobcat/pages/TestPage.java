@@ -1,4 +1,4 @@
-package sample.bobcat.sample.bobcat.pages;
+package sample.bobcat.pages;
 
 import com.cognifide.qa.bb.aem.core.pages.AemAuthorPage;
 import com.cognifide.qa.bb.qualifier.PageObject;

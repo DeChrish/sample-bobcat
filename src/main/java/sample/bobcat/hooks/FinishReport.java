@@ -1,4 +1,4 @@
-package sample.bobcat.sample.bobcat.hooks;
+package sample.bobcat.hooks;
 
 import java.util.List;
 

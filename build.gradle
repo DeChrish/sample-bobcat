@@ -11,8 +11,6 @@ def cucumberVersion = '4.2.6'
 repositories {
     mavenLocal()
     mavenCentral()
-    jcenter()
-    maven { url 'http://repo1.maven.org/maven2' }
 }
 
 
@@ -29,6 +27,13 @@ dependencies {
 
 }
 
+def cucumberArgs = ['--plugin', 'pretty',
+                    '--plugin', 'html:build/cucumber-html-report',
+                    '--plugin', 'json:build/cucumber-json-report.json',
+                    '--glue', 'sample.bobcat',
+                    'src/test/resources']
+
+
 def profiles = [
         'firefox': 'firefox'
 ]
@@ -44,14 +49,16 @@ task cucumber() {
     if (!profile.equals('default')) {
         System.setProperty('bobcat.config.contexts', profile)
     }
-
+    
     dependsOn assemble, compileJava, compileTestJava
-
+    
     doLast {
         javaexec {
             main = "cucumber.api.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+            args = cucumberArgs
+            systemProperties = System.getProperties()
         }
     }
+    
 }

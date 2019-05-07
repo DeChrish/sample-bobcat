@@ -1,4 +1,4 @@
-package sample.bobcat.sample.bobcat.steps;
+package sample.bobcat.steps;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -7,7 +7,7 @@ import com.cognifide.qa.bb.api.actions.ActionException;
 import com.cognifide.qa.bb.api.actions.ActionsController;
 import com.cognifide.qa.bb.page.BobcatPageFactory;
 
-import sample.bobcat.sample.bobcat.pages.TestPage;
+import sample.bobcat.pages.TestPage;
 
 import com.google.inject.Inject;
 import cucumber.api.java.en.Given;

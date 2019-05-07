@@ -1,4 +1,4 @@
-package sample.bobcat.sample.bobcat;
+package sample.bobcat;
 
 import java.util.HashMap;
 import java.util.List;
