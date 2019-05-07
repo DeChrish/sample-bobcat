@@ -1,6 +1,7 @@
 package sample.bobcat.sample.bobcat.steps;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.cognifide.qa.bb.aem.core.api.AemActions;
 import com.cognifide.qa.bb.api.actions.ActionException;
 import com.cognifide.qa.bb.api.actions.ActionsController;
